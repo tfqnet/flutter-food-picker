@@ -1,5 +1,5 @@
 name: mealspin
-description: "A new Flutter project."
+description: "A fun food picker app that helps you decide what to eat with a spinning wheel animation. Choose from customizable food lists or use the default Malaysian cuisine options."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   shared_preferences: ^2.2.3
+  google_mobile_ads: ^5.1.0
 
 dev_dependencies:
   flutter_test:

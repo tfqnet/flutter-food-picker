@@ -18,10 +18,17 @@ class _ManageFoodsPageState extends State<ManageFoodsPage> {
     _loadFoods();
   }
 
+  // Default Malaysian foods list
+  static const List<String> _defaults = [
+    'Nasi Lemak', 'Roti Canai', 'Char Kuey Teow', 'Satay', 'Rendang',
+    'Laksa', 'Nasi Goreng', 'Mee Goreng', 'Curry Puff', 'Asam Pedas',
+    'Murtabak', 'Curry Laksa', 'Rojak', 'Chicken Rice', 'Teh Tarik'
+  ];
+
   Future<void> _loadFoods() async {
     final foods = await FoodStorage.loadFoodList();
     setState(() {
-      _foods = foods;
+      _foods = foods.isEmpty ? List<String>.from(_defaults) : foods;
     });
   }
 
